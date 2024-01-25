@@ -72,11 +72,6 @@ def show_aligned_images(RGB_intrinsic_matrix, RGB_rotation_vector, RGB_translati
         color_image, depth_image = capture_image()
         # processed_depth_image
         world_coords_3d = transform_entire_image_with_depth(depth_image, RGB_intrinsic_matrix, RGB_rotation_vector, RGB_translation_vector)
-        
-        # get the area of interest in color_image
-        # get the high obout each area of interest in depth image
-        # return every area of interest states like this [0, 1, 0, 2] 
-        # 0:more than 50%, 1:less than 50%, 2:less than 10%
 
         time.sleep(300)  # Wait for 5 minutes before capturing the next image
 
